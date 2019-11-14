@@ -2,7 +2,7 @@ import pathlib
 import math
 MICRO_CTL_LABEL = ["IRI", "IRO",
                    "IRLO",
-                   "PCI",
+                   "RESERVED",
                    "PCO",
                    "PCCE",
                    "ADDRI",
@@ -18,11 +18,14 @@ MICRO_CTL_LABEL = ["IRI", "IRO",
                    "HALT",
                    "DO",
                    "DPTRI",
-                   "PSWI", "PSW_IS"]
+                   "PSWI", "PSW_IS",
+                   "PCIS0","PCIS1","PCIS2"]
 
 MICRO_CTL_ENCODE = {
 
 }
+
+
 mc_fetch = [["PCO", "DPTRI"], ["DO", "IRI", "PCCE"]]
 
 mc = [
@@ -32,10 +35,10 @@ mc = [
     ["SUB", ["IRLO", "ADDRI"], ["RAMO", "BI"], ["ALU_O", "ALU_SUB", "AI", "PSWI", "PSW_IS"]],  # 0011 - SUB
     ["STA", ["IRLO", "ADDRI"], ["AO", "RAMI"]],  # 0100 - STA
     ["LDI", ["IRLO", "AI"]],  # 0101 - LDI
-    ["JMP", ["IRLO", "PCI"]],  # 0110 - JMP
-    ["JC",  ["IRLO", "PCI"]],  # 0111 - JC
-    ["JZ",  ["IRLO", "PCI"]],  # 1000 - JZ
-    ["JOV", ["IRLO", "PCI"]],  # 1001 - JOV
+    ["JMP", ["IRLO","PCIS0"]],  # 0110 - JMP
+    ["JC",  ["IRLO", "PCIS1"]],  # 0111 - JC
+    ["JZ",  ["IRLO", "PCIS0","PCIS1"]],  # 1000 - JZ
+    ["JOV", ["IRLO", "PCIS2"]],  # 1001 - JOV
     ["PSW", ["IRLO", "PSWI"]],  # 1010 - PSW
     [""],  # 1011
     [""],  # 1100
