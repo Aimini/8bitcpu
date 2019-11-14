@@ -1,3 +1,10 @@
+# Usage
+## rom
+find the element U129(2732 EPROM),place the bin file to these rom as program data.
+## output
+the output port is a crystal display, you can find it at schematic right upper.
+## assember
+assembler \<filename\> [ouputdir [ouputname]]
 # Architecture
 ## register
 this 8 bit CPU have two core Register  `A` and `PSW`. 
