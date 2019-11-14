@@ -91,9 +91,11 @@ jump to `addr` when `PSW.OV`.
 
 
 ## PSW
-|1010|immed|
-|:-:|:-:|
-set `PSW` to `immed`.
+|7..4|3|2|1|0|
+|:-:|:-:|:-:|:-:|:-:|
+|1010|value|OV|CY|TCN|
+
+set `PSW.FLAG` to `value`. the `PSW.FLAG` is one or more of OV, CY, TCN.
 
 ## OUT
 |1110|xxxx|
