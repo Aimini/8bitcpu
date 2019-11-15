@@ -1,2 +1,5 @@
 *.pdsbak
 *.workspace
+eeprom-bin/*.bin
+asm/*.bin
+script/opcode_list.py

@@ -2,7 +2,7 @@ import pathlib
 import math
 MICRO_CTL_LABEL = ["IRI", "IRO",
                    "IRLO",
-                   "RESERVED",
+                   "ROMO",
                    "PCO",
                    "PCCE",
                    "ADDRI",
@@ -16,8 +16,8 @@ MICRO_CTL_LABEL = ["IRI", "IRO",
                    "ALU_SUB",
                    "DII",
                    "HALT",
-                   "DO",
-                   "DPTRI",
+                   "RESERVED0",
+                   "RESERVED1",
                    "PSWI", "PSW_IS",
                    "PCIS0","PCIS1","PCIS2"]
 
@@ -26,7 +26,7 @@ MICRO_CTL_ENCODE = {
 }
 
 
-mc_fetch = [["PCO", "DPTRI"], ["DO", "IRI", "PCCE"]]
+mc_fetch = [["ROMO", "IRI", "PCCE"]]
 
 mc = [
     ["NOP", ],  # 0000 - NOP
@@ -59,7 +59,7 @@ for idx, l in enumerate(MICRO_CTL_LABEL):
 
     if idx % 4 == 0:
         print()
-    print("{:>8}".format(l), end=' ')
+    print("{:>10}".format(l), end=' ')
     for i in reversed(range(2*eprom_num)):
         print("{:0>4b}".format(0xF & (v >> (i*4))), end=' ')
     print()
