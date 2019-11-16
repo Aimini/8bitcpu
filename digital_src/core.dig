@@ -1400,7 +1400,7 @@
         </entry>
         <entry>
           <string>Data</string>
-          <data>a9,51,40,50,e0,20,78,64,e0,30,84,68</data>
+          <data>51,e1,40,50,e0,20,78,64,e0,30,84,68</data>
         </entry>
         <entry>
           <string>inverterConfig</string>
@@ -2456,20 +2456,15 @@
         </entry>
         <entry>
           <string>NetName</string>
-          <string>FTCMP</string>
+          <string>MCIO</string>
         </entry>
       </elementAttributes>
-      <pos x="1040" y="560"/>
+      <pos x="600" y="480"/>
     </visualElement>
     <visualElement>
-      <elementName>Out</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Label</string>
-          <string>FTCMP</string>
-        </entry>
-      </elementAttributes>
-      <pos x="1100" y="560"/>
+      <elementName>Probe</elementName>
+      <elementAttributes/>
+      <pos x="640" y="480"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -2986,6 +2981,10 @@
       <p2 x="1100" y="480"/>
     </wire>
     <wire>
+      <p1 x="600" y="480"/>
+      <p2 x="640" y="480"/>
+    </wire>
+    <wire>
       <p1 x="1300" y="1060"/>
       <p2 x="1320" y="1060"/>
     </wire>
@@ -3200,10 +3199,6 @@
     <wire>
       <p1 x="820" y="560"/>
       <p2 x="840" y="560"/>
-    </wire>
-    <wire>
-      <p1 x="1040" y="560"/>
-      <p2 x="1100" y="560"/>
     </wire>
     <wire>
       <p1 x="120" y="820"/>

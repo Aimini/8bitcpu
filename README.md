@@ -137,6 +137,11 @@ set `PSW.FLAG` to `value`. the `PSW.FLAG` is one or more of OV, CY, TCN.
 ## OUT
 |7-4|3-0|
 |:-:|:-:|
-|1110|xxxx|
+|1110|oaddr|
 
-send `A` to ouput port.
+send `A` to ouput port at `oaddr`.
+
+# output port
+0. 8-bit 7 segment display, display it as 10 decimal number. 
+1. TCMP flag, if set it to 1, 7 segment display will treat data as Two's complement number, otherwise treat data as unsigned number.
+2. 8-bit char printer
