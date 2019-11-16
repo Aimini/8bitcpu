@@ -1,7 +1,6 @@
 import pathlib
 import math
-MICRO_CTL_LABEL = ["IRI", "IRO",
-                   "IRLO",
+MICRO_CTL_LABEL = ["IRI", "IRHO", "IRLO",
                    "ROMO",
                    "PCO",
                    "PCCE",
